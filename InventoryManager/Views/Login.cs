@@ -27,15 +27,23 @@ namespace InventoryManager.Views
             if(bdm.validateUser(usr, pass))
             {
                 MessageBox.Show("Bienvenid@!!");
-                MainMenu mm = new MainMenu();
-                mm.Show();
-                this.Hide();
+                var thread = new System.Threading.Thread(new System.Threading.ThreadStart(RunPrincipal));
+                this.Close();
+                thread.SetApartmentState(System.Threading.ApartmentState.STA);
+                thread.Start();
+                
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrecto.");
             }
             
+        }
+
+        private void RunPrincipal()
+        {
+            MainMenu main = new MainMenu();
+            main.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
