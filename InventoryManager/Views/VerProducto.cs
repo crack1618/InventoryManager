@@ -12,8 +12,9 @@ namespace InventoryManager.Views
 {
     public partial class VerProducto : Form
     {
-        public VerProducto()
+        public VerProducto(string producto)
         {
+            // productos: "camisa","blusa","pantalon-hombre","pantalon-mujer","accesirio-hombre","accesorio-mujer","saco","vestido"
             InitializeComponent();
         }
     }

@@ -28,10 +28,9 @@ namespace InventoryManager.Views
             {
                 MessageBox.Show("Bienvenid@!!");
                 var thread = new System.Threading.Thread(new System.Threading.ThreadStart(RunPrincipal));
-                this.Close();
                 thread.SetApartmentState(System.Threading.ApartmentState.STA);
                 thread.Start();
-                
+                this.Close();
             }
             else
             {
@@ -43,7 +42,8 @@ namespace InventoryManager.Views
         private void RunPrincipal()
         {
             MainMenu main = new MainMenu();
-            main.Show();
+            //VerProducto main = new VerProducto("camisas");
+            main.ShowDialog();            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,11 +51,7 @@ namespace InventoryManager.Views
             Application.Exit();
         }
 
-        private bool validateLogin()
-        {
-
-            return true;
-        }
 
     }
 }
+
