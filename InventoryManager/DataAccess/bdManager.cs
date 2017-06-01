@@ -33,5 +33,28 @@ namespace InventoryManager.DataAccess
             }
             return valid;
         }
+
+        public string description(string producto)
+        {
+            string description = "";
+            var connectionString = ConfigurationManager.ConnectionStrings["InventoryManager.Properties.Settings.IMDBConnectionString"].ConnectionString;
+            string query = "SELECT description FROM dbo.Producto WHERE type = '"+producto+"'";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        description = reader["description"].ToString();
+                    } else
+                    {
+                        description = "pitos";
+                    }
+                }
+            }
+            return description;
+        }
     }
 }
