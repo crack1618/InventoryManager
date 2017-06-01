@@ -34,11 +34,11 @@ namespace InventoryManager.DataAccess
             return valid;
         }
 
-        public string description(string producto)
+        public string column(string producto, string attribute)
         {
-            string description = "";
+            string column = "";
             var connectionString = ConfigurationManager.ConnectionStrings["InventoryManager.Properties.Settings.IMDBConnectionString"].ConnectionString;
-            string query = "SELECT description FROM dbo.Producto WHERE type = '"+producto+"'";
+            string query = "SELECT "+attribute+" FROM dbo.Producto WHERE type = '"+producto+"'";
             using (var connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand(query, connection);
@@ -47,14 +47,14 @@ namespace InventoryManager.DataAccess
                 {
                     if (reader.Read())
                     {
-                        description = reader["description"].ToString();
+                        column = reader[attribute].ToString();
                     } else
                     {
-                        description = "pitos";
+                        column = "---";
                     }
                 }
             }
-            return description;
+            return column;
         }
     }
 }
