@@ -63,7 +63,6 @@
     <Compile Include="DataAccess\bdManager.cs" />
     <Compile Include="IMDBDataSet.cs">
       <DependentUpon>IMDBDataSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IMDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -110,12 +109,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VerProducto.resx">
+      <DependentUpon>VerProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IMDBDataSet.xsc">
       <DependentUpon>IMDBDataSet.xsd</DependentUpon>
@@ -142,6 +145,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\d.bmp" />
     <Content Include="Images\logo.jpeg" />
     <Content Include="IMDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
