@@ -32,27 +32,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblproducto = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.searchChangeToolStrip = new System.Windows.Forms.ToolStrip();
-            this.inputToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.iMDBProductoDataSet = new InventoryManager.IMDBProductoDataSet();
-            this.productoTableAdapter = new InventoryManager.IMDBProductoDataSetTableAdapters.ProductoTableAdapter();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.barcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xibitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iMDBProductoDataSet = new InventoryManager.IMDBProductoDataSet();
+            this.productoTableAdapter = new InventoryManager.IMDBProductoDataSetTableAdapters.ProductoTableAdapter();
+            this.searchChangeToolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.inputToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.inputToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.typeToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.typeToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.searchChangeToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.searchChangeToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMDBProductoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.searchChangeToolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -84,14 +86,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Producto:";
             // 
-            // label3
+            // lblproducto
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nombre del Producto";
+            this.lblproducto.AutoSize = true;
+            this.lblproducto.Location = new System.Drawing.Point(98, 27);
+            this.lblproducto.Name = "lblproducto";
+            this.lblproducto.Size = new System.Drawing.Size(107, 13);
+            this.lblproducto.TabIndex = 3;
+            this.lblproducto.Text = "Nombre del Producto";
             // 
             // dataGridView1
             // 
@@ -112,53 +114,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(689, 150);
             this.dataGridView1.TabIndex = 4;
             // 
-            // searchChangeToolStrip
+            // label4
             // 
-            this.searchChangeToolStrip.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.searchChangeToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.searchChangeToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1,
-            this.inputToolStripTextBox,
-            this.toolStripButton1});
-            this.searchChangeToolStrip.Location = new System.Drawing.Point(31, 53);
-            this.searchChangeToolStrip.Name = "searchChangeToolStrip";
-            this.searchChangeToolStrip.Size = new System.Drawing.Size(281, 25);
-            this.searchChangeToolStrip.TabIndex = 5;
-            this.searchChangeToolStrip.Text = "searchChangeToolStrip";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(303, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cantidad:";
             // 
-            // inputToolStripTextBox
+            // numericUpDown1
             // 
-            this.inputToolStripTextBox.Name = "inputToolStripTextBox";
-            this.inputToolStripTextBox.Size = new System.Drawing.Size(200, 25);
-            // 
-            // productoBindingSource
-            // 
-            this.productoBindingSource.DataMember = "Producto";
-            this.productoBindingSource.DataSource = this.iMDBProductoDataSet;
-            // 
-            // iMDBProductoDataSet
-            // 
-            this.iMDBProductoDataSet.DataSetName = "IMDBProductoDataSet";
-            this.iMDBProductoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productoTableAdapter
-            // 
-            this.productoTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::InventoryManager.Properties.Resources.buscar;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(46, 22);
-            this.toolStripLabel1.Text = "Buscar: ";
+            this.numericUpDown1.Location = new System.Drawing.Point(306, 272);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 7;
             // 
             // barcodeDataGridViewTextBoxColumn
             // 
@@ -200,32 +170,77 @@
             this.xibitDataGridViewTextBoxColumn.ReadOnly = true;
             this.xibitDataGridViewTextBoxColumn.Width = 90;
             // 
-            // label4
+            // productoBindingSource
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(303, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cantidad:";
+            this.productoBindingSource.DataMember = "Producto";
+            this.productoBindingSource.DataSource = this.iMDBProductoDataSet;
             // 
-            // numericUpDown1
+            // iMDBProductoDataSet
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(306, 272);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 7;
+            this.iMDBProductoDataSet.DataSetName = "IMDBProductoDataSet";
+            this.iMDBProductoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productoTableAdapter
+            // 
+            this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // searchChangeToolStrip1
+            // 
+            this.searchChangeToolStrip1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.searchChangeToolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.searchChangeToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inputToolStripLabel,
+            this.inputToolStripTextBox,
+            this.typeToolStripLabel,
+            this.typeToolStripTextBox,
+            this.searchChangeToolStripButton});
+            this.searchChangeToolStrip1.Location = new System.Drawing.Point(33, 53);
+            this.searchChangeToolStrip1.Name = "searchChangeToolStrip1";
+            this.searchChangeToolStrip1.Size = new System.Drawing.Size(546, 25);
+            this.searchChangeToolStrip1.TabIndex = 8;
+            this.searchChangeToolStrip1.Text = "searchChangeToolStrip1";
+            // 
+            // inputToolStripLabel
+            // 
+            this.inputToolStripLabel.Name = "inputToolStripLabel";
+            this.inputToolStripLabel.Size = new System.Drawing.Size(102, 22);
+            this.inputToolStripLabel.Text = "Código/Descripción:";
+            // 
+            // inputToolStripTextBox
+            // 
+            this.inputToolStripTextBox.Name = "inputToolStripTextBox1";
+            this.inputToolStripTextBox.Size = new System.Drawing.Size(250, 25);
+            // 
+            // typeToolStripLabel
+            // 
+            this.typeToolStripLabel.Name = "typeToolStripLabel";
+            this.typeToolStripLabel.Size = new System.Drawing.Size(57, 22);
+            this.typeToolStripLabel.Text = "Producto: ";
+            // 
+            // typeToolStripTextBox
+            // 
+            this.typeToolStripTextBox.Enabled = false;
+            this.typeToolStripTextBox.Name = "typeToolStripTextBox";
+            this.typeToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // searchChangeToolStripButton
+            // 
+            this.searchChangeToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.searchChangeToolStripButton.Image = global::InventoryManager.Properties.Resources.buscar;
+            this.searchChangeToolStripButton.Name = "searchChangeToolStripButton";
+            this.searchChangeToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.searchChangeToolStripButton.Click += new System.EventHandler(this.searchChangeToolStripButton_Click_1);
             // 
             // GenerarCambio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 375);
+            this.Controls.Add(this.searchChangeToolStrip1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.searchChangeToolStrip);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblproducto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -233,11 +248,11 @@
             this.Text = "Generar Cambio";
             this.Load += new System.EventHandler(this.GenerarCambio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.searchChangeToolStrip.ResumeLayout(false);
-            this.searchChangeToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMDBProductoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.searchChangeToolStrip1.ResumeLayout(false);
+            this.searchChangeToolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,21 +263,23 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblproducto;
         private System.Windows.Forms.DataGridView dataGridView1;
         private IMDBProductoDataSet iMDBProductoDataSet;
         private System.Windows.Forms.BindingSource productoBindingSource;
         private IMDBProductoDataSetTableAdapters.ProductoTableAdapter productoTableAdapter;
-        private System.Windows.Forms.ToolStrip searchChangeToolStrip;
-        private System.Windows.Forms.ToolStripTextBox inputToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.DataGridViewTextBoxColumn barcodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn xibitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ToolStrip searchChangeToolStrip1;
+        private System.Windows.Forms.ToolStripLabel inputToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox inputToolStripTextBox;
+        private System.Windows.Forms.ToolStripLabel typeToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox typeToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton searchChangeToolStripButton;
     }
 }
