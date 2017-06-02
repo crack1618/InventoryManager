@@ -85,10 +85,49 @@ namespace InventoryManager.DataAccess
             return valid;
         }
 
-        public string column(string producto, string attribute)
+        public int total(string product, string tipo)
         {
-            string column = "";
-            string query = "SELECT "+attribute+" FROM dbo.Producto WHERE type = '"+producto+"'";
+            int total = 0;
+            string query = "SELECT "+tipo+" FROM dbo.Producto WHERE type='"+product+"'";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        total += Int32.Parse(reader[tipo].ToString());
+                    }
+                }
+            }
+            return total;
+        }
+
+        public float totalPrecio(string product, string tipo)
+        {
+            float total = 0;
+            string query = "SELECT price, "+ tipo + " FROM dbo.Producto WHERE type='"+product+"'";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(query, connection);
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        total += float.Parse(reader["price"].ToString()) * Int32.Parse(reader[tipo].ToString());
+                    }
+                }
+            }
+            return total;
+        }
+
+
+        public int prendasDiferentestipos(string product)
+        {
+            int nprendas = 0;
+            string query = "SELECT count(*) FROM dbo.Producto WHERE type='"+product+"'";
             using (var connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand(query, connection);
@@ -97,14 +136,11 @@ namespace InventoryManager.DataAccess
                 {
                     if (reader.Read())
                     {
-                        column = reader[attribute].ToString();
-                    } else
-                    {
-                        column = "---";
+                        nprendas = Int32.Parse(reader[0].ToString());
                     }
                 }
             }
-            return column;
+            return nprendas;
         }
 
         public bool GenerateChange(int code, string from, int quantity)

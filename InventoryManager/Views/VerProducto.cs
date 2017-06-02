@@ -15,44 +15,26 @@ namespace InventoryManager.Views
     {
 
         string product;
+        bdManager bdm;
         public VerProducto(string producto)
         {
             // productos: "camisa","blusa","pantalon-hombre","pantalon-mujer","accesirio-hombre","accesorio-mujer","saco","vestido"
             InitializeComponent();
             product = producto;
+            bdm = new bdManager();
         }
 
         private void VerProducto_Load(object sender, EventArgs e)
         {
-
             label1.Text = product;
-            bdManager dbm = new bdManager();
-            textBox1.Text = "Descripción: " + dbm.column(product, "description");
-            textBox1.ReadOnly = true;
-            //Bitmap image = new Bitmap(InventoryManager.Properties.Resources.d);
-            string aux = dbm.column(product, "xibit");
-            string aux2;
-            float aux3 = 0;
-            float aux4 = 0;
-            if (aux == "---")
-                label2.Text = "Exhibición: " + 0;
-            else label2.Text = "Exhibición: " + aux;
-            aux = dbm.column(product, "stock");
-            if (aux == "---")
-                label3.Text = "En almacén: " + 0;
-            else label3.Text = "En almacén: " + aux;
-            aux = dbm.column(product, "xibit");
-            aux2 = dbm.column(product, "price");
-            if (aux == "---" || aux2 == "---")
-                aux3 = 0;
-            else aux3 = float.Parse(aux2) * Int32.Parse(aux);
-            label4.Text = "Total en exhibión: " + aux3;
-            aux = dbm.column(product, "stock");
-            if (aux == "---" || aux2 == "---")
-                aux4 = 0;
-            else aux4 = float.Parse(aux2) * Int32.Parse(aux);
-            label5.Text = "Total en almacén: " + aux4;
-            label6.Text = "Total: " + (aux3 + aux4);
+            float totalE = bdm.totalPrecio(product, "xibit");
+            float totalA = bdm.totalPrecio(product, "stock");
+            label2.Text = "Prendas en exhibición: " + bdm.total(product, "xibit");
+            label3.Text = "Prendas en almacén: " + bdm.total(product, "stock");
+            label4.Text = "Precio total en exhibición: " + totalE;
+            label5.Text = "Precio total en almacén: " + totalA;
+            label6.Text = "Precio total: " + (totalA+totalE);
+            label7.Text = "Número de prendas distintas: " + bdm.prendasDiferentestipos(product);
         }
 
         private void label1_Click(object sender, EventArgs e)
