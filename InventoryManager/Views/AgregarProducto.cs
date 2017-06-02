@@ -14,14 +14,14 @@ namespace InventoryManager.Views
     public partial class AgregarProducto : Form
     {
         private bdManager bdm;
-        private string producto;
+        private string productoActual;
 
         public AgregarProducto(string producto)
         {
             bdm = new bdManager();
             InitializeComponent();
             lblCode.Text = ""+bdm.getNextCode();
-            this.producto = producto;
+            this.productoActual = producto;
         }
 
         public bool ValidateFields()
@@ -43,7 +43,7 @@ namespace InventoryManager.Views
             string gender,description,type; 
             decimal price; 
             int stock, xibit;
-            switch (producto)
+            switch (productoActual)
             {
                 case "camisa":
                     gender = "H";
@@ -104,7 +104,7 @@ namespace InventoryManager.Views
 
         private void RunVerProducto()
         {
-            VerProducto vp = new VerProducto(producto);
+            VerProducto vp = new VerProducto(productoActual);
             vp.ShowDialog();
         }
 
