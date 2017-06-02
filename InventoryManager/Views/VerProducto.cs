@@ -35,6 +35,41 @@ namespace InventoryManager.Views
             label5.Text = "Precio total en almacén: " + totalA;
             label6.Text = "Precio total: " + (totalA+totalE);
             label7.Text = "Número de prendas distintas: " + bdm.prendasDiferentestipos(product);
+            switch(this.product)
+            {
+                case "camisa":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.shirt;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "pantalon-hombre":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.pants;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "accesorio-hombre":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.accesorio;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "saco":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.coat;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "blusa":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.blouse;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "pantalon-mujer":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.womanpants;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "accesorio-mujer":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.glasses;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+                case "vestido":
+                    pictureBox1.BackgroundImage = global::InventoryManager.Properties.Resources.dress;
+                    this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+                    break;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

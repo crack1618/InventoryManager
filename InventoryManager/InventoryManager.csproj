@@ -204,7 +204,15 @@
   <ItemGroup>
     <None Include="Images\d.bmp" />
     <None Include="Images\buscar.JPG" />
+    <None Include="Images\glasses.png" />
+    <None Include="Images\dress.jpg" />
+    <None Include="Images\coat.png" />
+    <None Include="Images\blouse.png" />
+    <None Include="Images\accesorio.png" />
     <Content Include="Images\logo.jpeg" />
+    <None Include="Images\womanpants.jpg" />
+    <None Include="Images\shirt.png" />
+    <None Include="Images\pants.png" />
     <Content Include="IMDB.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
