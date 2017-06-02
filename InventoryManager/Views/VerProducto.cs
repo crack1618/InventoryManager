@@ -78,8 +78,18 @@ namespace InventoryManager.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            var thread = new System.Threading.Thread(new System.Threading.ThreadStart(report));
+            thread.SetApartmentState(System.Threading.ApartmentState.STA);
+            thread.Start();
+            this.Close();
         }
+
+        public void report()
+        {
+            Reporte r = new Reporte();
+            r.ShowDialog();
+        } 
+
 
         private void button4_Click(object sender, EventArgs e)
         {
