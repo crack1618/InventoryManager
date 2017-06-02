@@ -70,9 +70,23 @@ namespace InventoryManager.Views
             gc.ShowDialog();
         }
 
+        private void back()
+        {
+            MainMenu mm = new MainMenu();
+            mm.ShowDialog();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var thread = new System.Threading.Thread(new System.Threading.ThreadStart(back));
+            thread.SetApartmentState(System.Threading.ApartmentState.STA);
+            thread.Start();
+            this.Close();
         }
     }
 }

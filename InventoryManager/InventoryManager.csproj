@@ -176,11 +176,11 @@
     <None Include="Images\buscar.JPG" />
     <Content Include="Images\logo.jpeg" />
     <Content Include="IMDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="IMDB_log.ldf">
       <DependentUpon>IMDB.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
