@@ -21,6 +21,7 @@ namespace InventoryManager.Views
             bdm = new bdManager();
             InitializeComponent();
             lblCode.Text = ""+bdm.getNextCode();
+            this.producto = producto;
         }
 
         public bool ValidateFields()
