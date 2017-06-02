@@ -34,8 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblproducto = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.barcodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +41,8 @@
             this.xibitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iMDBProductoDataSet = new InventoryManager.IMDBProductoDataSet();
+            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.productoTableAdapter = new InventoryManager.IMDBProductoDataSetTableAdapters.ProductoTableAdapter();
             this.searchChangeToolStrip1 = new System.Windows.Forms.ToolStrip();
             this.inputToolStripLabel = new System.Windows.Forms.ToolStripLabel();
@@ -50,10 +50,12 @@
             this.typeToolStripLabel = new System.Windows.Forms.ToolStripLabel();
             this.typeToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchChangeToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMDBProductoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.searchChangeToolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,22 +116,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(689, 150);
             this.dataGridView1.TabIndex = 4;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(303, 251);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cantidad:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(306, 272);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 7;
-            // 
             // barcodeDataGridViewTextBoxColumn
             // 
             this.barcodeDataGridViewTextBoxColumn.DataPropertyName = "barcode";
@@ -180,6 +166,22 @@
             this.iMDBProductoDataSet.DataSetName = "IMDBProductoDataSet";
             this.iMDBProductoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(303, 251);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cantidad:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(306, 272);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 7;
+            // 
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
@@ -194,7 +196,7 @@
             this.typeToolStripLabel,
             this.typeToolStripTextBox,
             this.searchChangeToolStripButton});
-            this.searchChangeToolStrip1.Location = new System.Drawing.Point(33, 53);
+            this.searchChangeToolStrip1.Location = new System.Drawing.Point(31, 53);
             this.searchChangeToolStrip1.Name = "searchChangeToolStrip1";
             this.searchChangeToolStrip1.Size = new System.Drawing.Size(546, 25);
             this.searchChangeToolStrip1.TabIndex = 8;
@@ -208,7 +210,7 @@
             // 
             // inputToolStripTextBox
             // 
-            this.inputToolStripTextBox.Name = "inputToolStripTextBox1";
+            this.inputToolStripTextBox.Name = "inputToolStripTextBox";
             this.inputToolStripTextBox.Size = new System.Drawing.Size(250, 25);
             // 
             // typeToolStripLabel
@@ -231,11 +233,33 @@
             this.searchChangeToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.searchChangeToolStripButton.Click += new System.EventHandler(this.searchChangeToolStripButton_Click_1);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(506, 261);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 41);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Realizar Cambio";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(635, 261);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 41);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // GenerarCambio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 375);
+            this.ClientSize = new System.Drawing.Size(745, 327);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.searchChangeToolStrip1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
@@ -248,9 +272,9 @@
             this.Text = "Generar Cambio";
             this.Load += new System.EventHandler(this.GenerarCambio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iMDBProductoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.searchChangeToolStrip1.ResumeLayout(false);
             this.searchChangeToolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -281,5 +305,7 @@
         private System.Windows.Forms.ToolStripLabel typeToolStripLabel;
         private System.Windows.Forms.ToolStripTextBox typeToolStripTextBox;
         private System.Windows.Forms.ToolStripButton searchChangeToolStripButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
