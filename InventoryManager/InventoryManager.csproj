@@ -63,11 +63,16 @@
     <Compile Include="DataAccess\bdManager.cs" />
     <Compile Include="IMDBDataSet.cs">
       <DependentUpon>IMDBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IMDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IMDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IMDBProductoDataSet.cs">
+      <DependentUpon>IMDBProductoDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="IMDBProductoDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,11 +176,11 @@
     <None Include="Images\buscar.JPG" />
     <Content Include="Images\logo.jpeg" />
     <Content Include="IMDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="IMDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>IMDB.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
