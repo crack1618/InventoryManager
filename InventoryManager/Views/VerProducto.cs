@@ -70,7 +70,7 @@ namespace InventoryManager.Views
 
         private void addProduct()
         {
-            AgregarProducto ap = new AgregarProducto();
+            AgregarProducto ap = new AgregarProducto(product);
             ap.ShowDialog();
         }
 
@@ -84,8 +84,13 @@ namespace InventoryManager.Views
 
         private void modifyProduct()
         {
-            GenerarCambio gc = new GenerarCambio();
+            GenerarCambio gc = new GenerarCambio(product);
             gc.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

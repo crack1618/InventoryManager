@@ -43,7 +43,7 @@ namespace InventoryManager.DataAccess
         public int getNextCode()
         {
             int nextBarCode;
-            string queryString = "SELECT TOP 1 barcode FROM dbo.Producto WHERE ORDER BY barcode DESC";
+            string queryString = "SELECT TOP 1 barcode FROM dbo.Producto ORDER BY barcode DESC";
             using (var connection = new SqlConnection(connectionString))
             {
                 var command = new SqlCommand(queryString, connection);
