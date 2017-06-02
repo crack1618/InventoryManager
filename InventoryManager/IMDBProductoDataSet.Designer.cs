@@ -997,8 +997,8 @@ SELECT barcode, gender, type, price, stock, xibit, description, dev FROM Product
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT     barcode, gender, type, price, stock, xibit, description, dev\r\nFROM    " +
-                "     Producto\r\nWHERE     (description LIKE @input + \'%\') OR\r\n                   " +
-                "   (barcode LIKE @input + \'%\')\r\n                 AND (type = @type)";
+                "     Producto\r\nWHERE     (description LIKE \'%\'+@input + \'%\') OR\r\n               " +
+                "       (barcode LIKE @input + \'%\')\r\n                 AND (type = @type)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@input", global::System.Data.SqlDbType.VarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@type", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

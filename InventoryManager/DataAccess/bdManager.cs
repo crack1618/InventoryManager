@@ -143,11 +143,27 @@ namespace InventoryManager.DataAccess
             return nprendas;
         }
 
+        public bool ValidateQuantityInStock(int code, string from, int itemsToMove)
+        {
+            string queryString = "SELECT TOP 1 "+from+" FROM dbo.Producto WHERE barcode=@code and "+from+">=@moving";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var command = new SqlCommand(queryString, connection);
+                command.Parameters.AddWithValue("@code", code);
+                command.Parameters.AddWithValue("@moving", itemsToMove);
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    return reader.HasRows;
+                }
+            }
+        }
+
         public bool GenerateChange(int code, string from, int quantity)
         {
             string to = (from == "stock") ? "xibit" : "stock";
             string queryString = "UPDATE dbo.Producto set "+ from + " = "+from+"-"+quantity+", "
-                                + from + " = " + from + "+" + quantity
+                                + to + " = " + to + "+" + quantity
                                 + " WHERE barcode = @barcode";
             using (var connection = new SqlConnection(connectionString))
             {
