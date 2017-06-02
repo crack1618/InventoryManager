@@ -17,6 +17,7 @@ namespace InventoryManager.Views
         public Login()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -51,7 +52,10 @@ namespace InventoryManager.Views
             Application.Exit();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

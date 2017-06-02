@@ -16,7 +16,7 @@ namespace InventoryManager.Views
         public MainMenu()
         {
             InitializeComponent();
-
+            this.CenterToScreen();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -84,6 +84,11 @@ namespace InventoryManager.Views
         {
             producto = "vestido";
             redirect();
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,7 @@ namespace InventoryManager.Views
         public Reporte()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void Reporte_Load(object sender, EventArgs e)
@@ -24,5 +25,19 @@ namespace InventoryManager.Views
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var thread = new System.Threading.Thread(new System.Threading.ThreadStart(back));
+            thread.SetApartmentState(System.Threading.ApartmentState.STA);
+            thread.Start();
+            this.Close();
+        }
+        private void back()
+        {
+            MainMenu mm = new MainMenu();
+            mm.ShowDialog();
+        }
+
     }
 }

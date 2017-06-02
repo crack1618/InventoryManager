@@ -22,6 +22,7 @@ namespace InventoryManager.Views
             InitializeComponent();
             lblCode.Text = ""+bdm.getNextCode();
             this.productoActual = producto;
+            this.CenterToScreen();
         }
 
         public bool ValidateFields()

@@ -22,6 +22,7 @@ namespace InventoryManager.Views
             InitializeComponent();
             product = producto;
             bdm = new bdManager();
+            this.CenterToScreen();
         }
 
         private void VerProducto_Load(object sender, EventArgs e)
@@ -31,9 +32,9 @@ namespace InventoryManager.Views
             float totalA = bdm.totalPrecio(product, "stock");
             label2.Text = "Prendas en exhibición: " + bdm.total(product, "xibit");
             label3.Text = "Prendas en almacén: " + bdm.total(product, "stock");
-            label4.Text = "Precio total en exhibición: " + totalE;
-            label5.Text = "Precio total en almacén: " + totalA;
-            label6.Text = "Precio total: " + (totalA+totalE);
+            label4.Text = "Precio total en exhibición: $" + totalE.ToString("0.00");
+            label5.Text = "Precio total en almacén: $" + totalA.ToString("0.00");
+            label6.Text = "Precio total: $" + (totalA+totalE).ToString("0.00");
             label7.Text = "Número de prendas distintas: " + bdm.prendasDiferentestipos(product);
             switch(this.product)
             {

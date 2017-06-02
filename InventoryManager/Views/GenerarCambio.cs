@@ -53,6 +53,7 @@ namespace InventoryManager.Views
             typeToolStripTextBox.Text = type.ToUpper();
             lblproducto.Text = type;
             bdm = new bdManager();
+            this.CenterToScreen();
 
         }
 
