@@ -19,6 +19,8 @@ namespace InventoryManager.Views
 
         private void Reporte_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSetProductos.Producto' table. You can move, or remove it, as needed.
+            this.productoTableAdapter.Fill(this.dataSetProductos.Producto);
 
             this.reportViewer1.RefreshReport();
         }

@@ -6,16 +6,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.35889cm</Width>
+              <Width>2.12077cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.75035cm</Width>
+              <Width>1.37993cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.64451cm</Width>
+              <Width>2.30597cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.81208cm</Width>
+              <Width>2.46568cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.99729cm</Width>
@@ -24,12 +24,12 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.24083cm</Width>
+              <Width>7.34187cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.39375cm</Height>
+              <Height>0.75875cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -40,7 +40,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Código de barras</Value>
+                              <Value>Código</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -481,11 +481,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>DataSetProductos</DataSetName>
         <Top>0.92287cm</Top>
         <Left>0.49953cm</Left>
-        <Height>2.7875cm</Height>
-        <Width>15.30396cm</Width>
+        <Height>2.1525cm</Height>
+        <Width>20.11151cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -496,7 +496,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>6.5in</Width>
+  <Width>8.11458in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -518,7 +518,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DataSetProductos">
       <Query>
         <DataSourceName>DataSetProductos</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -559,7 +559,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetProductos</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\pedro\Documents\proyectos\InventoryManager\InventoryManager\DataSetProductos.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\santi\Software\dot_net_projects\InventoryManager\InventoryManager\InventoryManager\DataSetProductos.xsd</rd:SchemaPath>
         <rd:TableName>Producto</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
